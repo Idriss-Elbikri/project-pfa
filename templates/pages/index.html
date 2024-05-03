@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>GloMart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+	<link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<link rel="stylesheet" href="{% static 'css/aos.css' %}">
+	<link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+	<link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+	<link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+	<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  </head>
+  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="{% url 'index' %}">GloMart</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"><a href="{% url 'index' %}" class="nav-link">Home</a></li>
+	          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="{% url 'shop' %}">Shop</a>
+				  <a class="dropdown-item" href="{% url 'connect' %}">Connect</a>
+                <a class="dropdown-item" href="{% url 'checkout' %}">Checkout</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="{% url 'blog' %}" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta cta-colored"><a href="{% url 'cart' %}" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+
+    <section id="home-section" class="hero">
+		  <div class="home-slider js-fullheight owl-carousel">
+	      <div class="slider-item js-fullheight">
+	      	<div class="overlay"></div>
+	        <div class="container-fluid p-0">
+	          <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third order-md-last img js-fullheight" style="background-image:url('{% static 'images/bg_1.jpg' %}');">
+
+	          	</div>
+		          <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">GloMart eCommerce Shop</span>
+		          		<div class="horizontal">
+		          			<h3 class="vr" style="background-image: url(images/divider.jpg);">Stablished Since 2000</h3>
+				            <h1 class="mb-4 mt-3">Catch Your Own <br><span>Stylish &amp; Look</span></h1>
+				            <p>Elevate your fashion game with our exclusive collection, tailored to help you express your individuality and create a look that's uniquely yours.</p>
+				            
+				            <p><a href="{% url 'shop' %}" class="btn btn-primary px-5 py-3 mt-3">Discover Now</a></p>
+				          </div>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+
+	      <div class="slider-item js-fullheight">
+	      	<div class="overlay"></div>
+	        <div class="container-fluid p-0">
+	          <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third order-md-last img js-fullheight" style="background-image:url('{% static 'images/bg_2.jpg' %}');">
+	          	</div>
+		          <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">GloMart eCommerce Shop</span>
+		          		<div class="horizontal">
+		          			<h3 class="vr" style="background-image: url('{% static 'images/divider.jpg' %}');">Best eCommerce Online Shop</h3>
+				            <h1 class="mb-4 mt-3">A Thouroughly <span>Modern</span> Woman</h1>
+				            <p>Indulge in our thoroughly modern collection designed for the contemporary woman. Let your style speak volumes as you embrace the latest trends with confidence and flair.</p>
+				            
+				            <p><a href="{% url 'shop' %}" class="btn btn-primary px-5 py-3 mt-3">Shop Now</a></p>
+				          </div>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+	    </div>
+    </section>
+	<br>
+
+    <section class="ftco-section ftco-choose ftco-no-pb ftco-no-pt">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-8 d-flex align-items-stretch">
+    				<div class="img" style="background-image: url('{{ STATIC_URL }}static/images/about-1.jpg');"></div>
+    			</div>
+    			<div class="col-md-4 py-md-5 ftco-animate">
+    				<div class="text py-3 py-md-5">
+	            <h2 class="mb-4">New Women's Clothing Summer Collection <script>document.write(new Date().getFullYear());</script></h2>
+	            <p>Our New Collection.</p>
+	            <p><a href="{% url 'shop' %}" class="btn btn-white px-4 py-3">Shop now</a></p>
+    				</div>
+    			</div>
+    		</div>
+
+    		<div class="row">
+    			<div class="col-md-5 order-md-last d-flex align-items-stretch">
+    				<div class="img img-2" style="background-image: url('{{ STATIC_URL }}static/images/about-2.jpg');"></div>
+    			</div>
+    			<div class="col-md-7 py-3 py-md-5 ftco-animate">
+    				<div class="text text-2 py-md-5">
+	            <h2 class="mb-4">New Men's Clothing Summer Collection <script>document.write(new Date().getFullYear());</script></h2>
+	            <p>Introducing our latest summer collection for men! Step into style with our meticulously crafted garments designed to keep you looking sharp and feeling comfortable all season long.</p>
+	            <p><a href="#" class="btn btn-white px-4 py-3">Shop now</a></p>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+    <section class="ftco-section bg-light">
+    	<div class="container">
+				<div class="row justify-content-center mb-3 pb-3">
+          <div class="col-md-12 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Products</h2>
+            <p>Discover a world of possibilities with our diverse range of products, carefully curated to meet your needs and exceed your expectations.</p>
+          </div>
+        </div>   		
+    	</div>
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-5.jpg' %}" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#"></a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span></span></p>
+		    					</div>
+		    					<div class="rating">
+	    							
+	    						</div>
+	    					</div>
+    						<p class="bottom-area d-flex px-3">
+    							<a href="{% url 'shop' %}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="{% url 'shop' %}" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-6.jpg' %}" alt="Colorlib Template">
+	    					<div class="overlay"></div>
+	    				</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#"></a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span></span></p>
+		    					</div>
+		    					<div class="rating">
+	    							
+	    						</div>
+	    					</div>
+    						<p class="bottom-area d-flex px-3">
+    							<a href="{% url 'shop' %}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="{% url 'shop' %}" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-7.jpg' %}" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#"></a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span></span></p>
+		    					</div>
+		    					<div class="rating">
+	    							
+	    						</div>
+	    					</div>
+    						<p class="bottom-area d-flex px-3">
+    							<a href="{% url 'shop' %}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="{% url 'shop' %}" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    			<div class="col-sm col-md-6 col-lg ftco-animate">
+    				<div class="product">
+    					<a href="#" class="img-prod"><img class="img-fluid" src="{% static 'images/product-8.jpg' %}" alt="Colorlib Template">
+    						<div class="overlay"></div>
+    					</a>
+    					<div class="text py-3 px-3">
+    						<h3><a href="#"></a></h3>
+    						<div class="d-flex">
+    							<div class="pricing">
+		    						<p class="price"><span></span></p>
+		    					</div>
+		    					<div class="rating">
+	    							
+	    						</div>
+	    					</div>
+    						<p class="bottom-area d-flex px-3">
+    							<a href="{% url 'shop' %}" class="add-to-cart text-center py-2 mr-1"><span>Add to cart <i class="ion-ios-add ml-1"></i></span></a>
+    							<a href="{% url 'shop' %}" class="buy-now text-center py-2">Buy now<span><i class="ion-ios-cart ml-1"></i></span></a>
+    						</p>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+
+		<hr>
+
+		<section class="ftco-section-parallax">
+      <div class="parallax-img d-flex align-items-center">
+        <div class="container">
+          <div class="row d-flex justify-content-center py-5">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+              <h2>CHAT BOT</h2>
+              <div class="row d-flex justify-content-center mt-5">
+                <div class="col-md-8">
+                  
+                    <div class="form-group d-flex" >
+                      <input type="text" id="textinput" class="form-control">
+                      <input type="submit" value="Send" class="submit px-3" id="button">
+                    </div>
+					<div class="form-group d-flex">
+						<div id="chatbot"><p><span>Waiting For You !!</span></p>	</div>
+						
+					  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="ftco-footer bg-light ftco-section">
+      <div class="container">
+      	<div class="row">
+      		<div class="mouse">
+						<a  class="mouse-icon">
+							<div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+						</a>
+					</div>
+      	</div>
+        
+          
+          
+          <div class="col-md-12 text-center">
+
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+						</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <!-- <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div> -->
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="{% static 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false' %}"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script> 
+    
+
+  <script>
+
+	function getuser(){
+		var usertext = $('#textinput').val();
+		var userhtml = "<p>User:<span>"+usertext+" </span></p>";
+			$('#textinput').val("");
+			$('#chatbot').append(userhtml);
+
+			$.get('/getresponse',{usermessage:usertext}).done(function(data){
+
+					var returnedmess = "<p>Chatbot: <span>"+data+"</span></p>";
+					$('#chatbot').append(returnedmess);
+					
+
+
+			})
+
+	}
+
+	$('#button').click(function(){
+
+		getuser();
+
+						
+	})
+  </script>
+
+  </body>
+</html>
