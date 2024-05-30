@@ -166,7 +166,7 @@ def delconn(request):
 
 
 
-GOOGLE_API_KEY = 'AIzaSyAUBFKPO-dUVKUwEFtrSDAlzo27fqgLmHw'
+GOOGLE_API_KEY = 'key here'
 dt={}
 
 q=" "  
